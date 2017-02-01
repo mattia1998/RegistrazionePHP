@@ -68,8 +68,22 @@ position: absolute; center: 100%; top:0;
 }
 
 #submit_button {
-	border-radius: 20px; 
-	background: #FFFFFF;
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    box-shadow: 2px 2px 1px #888888;
+    color: #757575; text-decoration: none;
+}
+
+#submit_button:hover {
+   background: #4b545f;
+	background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+	background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+	background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+   color: #fff;
 }
 
 #input_user {

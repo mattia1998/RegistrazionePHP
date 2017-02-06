@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	include 'conn.inc.php';
-	header("Location : area_privata.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,6 +13,7 @@
             alert("ERRORE NELL'INSERIMENTO DEI DATI OPPURE UTENTE NON REGISTRATO");
          }
       </script>
+		
    </head>
    <body>
       <body bgcolor = "00BFFF"/>
@@ -61,6 +61,7 @@
                      if($stm->rowCount() == 1)
                      {
 								echo '<script type="text/javascript">alert("ACCESSO");</script>';
+								header('Location:area_privata.php');
                      }
                      else
                      {

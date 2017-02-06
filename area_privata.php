@@ -10,15 +10,17 @@
 <body>	
 	<body bgcolor = "00BFFF"/>
 	
+   <!-- Menu -->
 	<nav align = "center">
 		<ul>
-			<li><a href="index.php">Home</a></li>
+			<li><a href="#">Home</a></li>
 			<li><a href="#">Profilo</a>
 				<ul>
-					<li><a href="log_in.php">Accedi</a></li>
+               <li><a href="log_out.php">Log Out</a></li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
+    
 </body>
 </html>

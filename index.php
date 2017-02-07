@@ -1,5 +1,6 @@
 <?php
 	include 'conn.inc.php';
+	session_start();
 ?>
 
 <!DOCTYPE html>

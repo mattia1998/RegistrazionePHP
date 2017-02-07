@@ -1,5 +1,6 @@
 <?php
 	include 'conn.inc.php';
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +27,6 @@
 			</ul>
 		</nav>
 		<!-- Form -->
-
+		
 	</body>
 </html>

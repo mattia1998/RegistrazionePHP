@@ -98,6 +98,7 @@
                      $stm->bindValue(':citta',$_POST['citta']);
                      $stm->bindValue(':stato',$_POST['stato']);
                      $stm->execute();
+							print_r($stm);
                      if($stm->errorCode() == 0)
                      {
                         echo '<script type="text/javascript">registrazioneAvvenuta()</script>';

@@ -2,6 +2,7 @@
 	session_start();
 	include 'conn.inc.php';
 ?>
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -56,7 +57,7 @@
                      $stm = $dbh->prepare("SELECT * FROM Utenti WHERE Username = :user AND Password = :passwd");
                      $stm->bindValue(':user',$_POST['username']);
                      $pw = md5($_POST['password']);
-                     $stm->bindValue(':passwd',$pw);
+                     $stm->bindValue(':passwd',$pw);                                                                                                                                                       
                      $stm->execute();
                      if($stm->rowCount() == 1)
                      {

@@ -103,7 +103,8 @@
                         echo '<script type="text/javascript">registrazioneAvvenuta()</script>';
 								header('Location:area_privata.php');
                      }
-                     else{
+                     else
+							{
                         echo 'Errore nella Query';
                      }
                   }

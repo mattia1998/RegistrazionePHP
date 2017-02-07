@@ -2,6 +2,7 @@
 	include 'conn.inc.php';
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Area Privata</title>

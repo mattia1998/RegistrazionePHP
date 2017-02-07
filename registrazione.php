@@ -1,6 +1,7 @@
 <?php
 	include 'conn.inc.php';
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -100,6 +101,7 @@
                      if($stm->errorCode() == 0)
                      {
                         echo '<script type="text/javascript">registrazioneAvvenuta()</script>';
+								header('Location:area_privata.php');
                      }
                      else{
                         echo 'Errore nella Query';

@@ -72,6 +72,14 @@ position: absolute; center: 100%; top:0;
 	background: #FFFFFF;
 }
 
+#input_user:focus {
+    background-color: lightblue;
+}
+
+#input_psw:focus {
+    background-color: lightblue;
+}
+
 #input_user {
 	border: 10px;
 }

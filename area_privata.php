@@ -8,6 +8,7 @@
 	<head>
 		<title>Area Privata</title>
 		<link href="menu.css" rel="stylesheet" />
+		<link href="tabella.css" rel="stylesheet" />
 	</head>
 	<body>	
 		<body bgcolor = "00BFFF"/>
@@ -24,17 +25,57 @@
 			</ul>
 		</nav>
 		<!-- Form -->
-		<form>
-			<select>
-				<?php
-					$mysqli = new mysqli("localhost","root","","RegistrazioneUtenti");
-					$query = $mysqli->query("SELECT idCategoria,NomeCategoria FROM Categoria");
-    			while($row=$query->fetch_row()){                                                 
-						echo "<option value='".$row[0]."'>".$row[1]."</option>";
-    			}
-				?>
-			</select>
-		</form>
+		<div align="center">
+			<form align="left">
+				<select>
+					<?php
+						$mysqli = new mysqli("localhost","root","","RegistrazioneUtenti");
+						$query = $mysqli->query("SELECT idCategoria,NomeCategoria FROM Categoria");
+						while($row=$query->fetch_row()){                                                 
+							echo "<option value='".$row[0]."'>".$row[1]."</option>";
+						}
+					?>
+				</select>
+			</form>
+			<div class="promos">  
+				<div class="promo">
+					<div class="deal">
+						<span>Abbigliamento</span>
+					</div>
+					<span class="price">$79</span>
+					<ul class="features">
+						<li>Some great feature</li>
+						<li>Another super feature</li>
+						<li>And more...</li>   
+					</ul>
+					<button>Sign up</button>
+				</div>
+				<div class="promo scale">
+					<div class="deal">
+						<span>Alimentari</span>
+					</div>
+					<span class="price">$89</span>
+					<ul class="features">
+						<li>Some great feature</li>
+						<li>Another super feature</li>
+						<li>And more...</li>   
+					</ul>
+					<button>Sign up</button>
+				</div>
+				<div class="promo">
+					<div class="deal">
+						<span>Tecnologia</span>
+					</div>
+					<span class="price">$69</span>
+					<ul class="features">
+						<li>Choose the one on the left</li>
+						<li>We need moneyy</li>
+						<li>And more...</li>   
+					</ul>
+					<button>Sign up</button>
+				</div>
+				</div>
+		</div>
 		
 	</body>
 </html>

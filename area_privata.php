@@ -48,7 +48,7 @@
 						<li>Another super feature</li>
 						<li>And more...</li>   
 					</ul>
-					<button>Sign up</button>
+					<button>Acquista</button>
 				</div>
 				<div class="promo scale">
 					<div class="deal">
@@ -60,7 +60,7 @@
 						<li>Another super feature</li>
 						<li>And more...</li>   
 					</ul>
-					<button>Sign up</button>
+					<button>Acquista</button>
 				</div>
 				<div class="promo">
 					<div class="deal">
@@ -72,7 +72,7 @@
 						<li>We need moneyy</li>
 						<li>And more...</li>   
 					</ul>
-					<button>Sign up</button>
+					<button>Acquista</button>
 				</div>
 				</div>
 		</div>

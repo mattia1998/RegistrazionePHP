@@ -67,39 +67,4 @@ nav ul ul ul {
 position: absolute; center: 100%; top:0;
 }
 
-#submit_button {
-	border-radius: 20px; 
-	background: #FFFFFF;
-}
-
-#input_user:focus {
-    background-color: lightblue;
-}
-
-#input_psw:focus {
-    background-color: lightblue;
-}
-
-#input_user {
-	border: 10px;
-}
-
-#input_psw {
-	border: 10px;
-}
-
-fieldset {
-   border:1px;
-   height:200.30px;
-   width:173.34px;
-   border-radius: 10px 10px 10px 10px;
-   box-shadow:0 0 10px #666;
-}
-
-legend {
-   padding: 0.2em 0.5em;
-   border:1px;
-   font-size:100%;
-   text-align:left;
-   box-shadow:0 0 10px #666;
-}
+#success_message{ display: none;}

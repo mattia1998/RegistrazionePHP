@@ -37,45 +37,75 @@
 		<br/><br/><br/><br/><br/>
 		<!-- Form per registrazione-->
 		<center>
-			<fieldset>
-				<legend>
-					Registrati
-				</legend>
-				<form id="reg" action="" method="POST">
-					<table>
-						<tr>
-							<td><b>Username:</b></td>
-							<td><input type="text" name="username" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Password:</b></td>
-							<td><input type="password" name="password" id="input_psw"></td>
-						</tr>
-						<tr>
-							<td><b>Nome:</b></td>
-							<td><input type="text" name="nome" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Cognome:</b></td>
-							<td><input type="text" name="cognome" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Data di Nascita:</b></td>
-							<td><input type="date" name="dataNascita" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Città:</b></td>
-							<td><input type="text" name="citta" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Stato:</b></td>
-							<td><input type="text" name="stato" id="input_user"></td>
-						</tr>			
-					</table>
-					<br/><br/>
-               <input type="submit" name="btnInvia" value="Invia" id="submit_button">
-				</form>
-			</fieldset>
+			<div class="container">
+				<form class="well form-horizontal" action=" " method="post"  id="contact_form">
+					<fieldset>
+
+				  		<!-- Form Name -->
+						<legend>Contact Us Today!</legend>
+
+						<!-- Text input-->
+
+						<div class="form-group">
+						  <label class="col-md-4 control-label">First Name</label>  
+						  <div class="col-md-4 inputGroupContainer">
+						  <div class="input-group">
+						  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+							 </div>
+						  </div>
+						</div>
+
+					<!-- Text input-->
+
+					 <div class="form-group">
+						 <label class="col-md-4 control-label" >Last Name</label> 
+						 <div class="col-md-4 inputGroupContainer">
+						 <div class="input-group">
+					  	 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					  	 <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+						 </div>
+					  </div>
+					</div>
+				<!-- Text input-->
+
+				 <div class="form-group">
+					  <label class="col-md-4 control-label">City</label>  
+						 <div class="col-md-4 inputGroupContainer">
+						 <div class="input-group">
+							  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+					  <input name="city" placeholder="city" class="form-control"  type="text">
+						 </div>
+					  </div>
+				</div>
+
+				<!-- Select Basic -->
+
+				<div class="form-group"> 
+				  <label class="col-md-4 control-label">State</label>
+					 <div class="col-md-4 selectContainer">
+						 <div class="input-group">
+							  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+						 <select name="state" class="form-control selectpicker" >
+							<option value=" " >Please select your state</option>
+							<option>Alabama</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<!-- Success message -->
+				<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+				<!-- Button -->
+				<div class="form-group">
+				  	<label class="col-md-4 control-label"></label>
+				  		<div class="col-md-4">
+					 	<button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+				  		</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
 			<!-- PHP -->
 			<?php 
 				if(isset($_POST['username']))

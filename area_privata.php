@@ -27,19 +27,20 @@
 		<br>
 		<br>
 		<br>
-		<div align="center">
-			<!--<form align="left">
+		<div align="left">
+			<form align="left">
 				<select>
 					<?php
-						//$mysqli = new mysqli("localhost","root","","RegistrazioneUtenti");
-						//$query = $mysqli->query("SELECT idCategoria,NomeCategoria FROM Categoria");
-						//while($row=$query->fetch_row()){                                                 
-							//echo "<option value='".$row[0]."'>".$row[1]."</option>";
-						//}
+						$mysqli = new mysqli("localhost","root","","RegistrazioneUtenti");
+						$query = $mysqli->query("SELECT idCategoria,NomeCategoria FROM Categoria");
+						while($row=$query->fetch_row()) {                                                 
+							echo "<option value='".$row[0]."'>".$row[1]."</option>";
+						}
 					?>
 				</select>
 			</form>
-			-->
+		</div>
+		<div align="center">
 			<div class="promos">  
 				<div class="promo">
 					<div class="deal">
@@ -49,25 +50,25 @@
 					<ul class="features">
 					</ul>
 					<button>Acquista</button>
-				</div>
-				<div class="promo scale">
-					<div class="deal">
-						<span>Alimentari</span>
 					</div>
-					<span class="price">$89</span>
-					<ul class="features">
-					</ul>
-					<button>Acquista</button>
-				</div>
-				<div class="promo">
-					<div class="deal">
-						<span>Tecnologia</span>
+					<div class="promo scale">
+						<div class="deal">
+							<span>Alimentari</span>
+						</div>
+						<span class="price">$89</span>
+						<ul class="features">
+						</ul>
+						<button>Acquista</button>
 					</div>
-					<span class="price">$69</span>
-					<ul class="features">  
-					</ul>
-					<button>Acquista</button>
-				</div>
+					<div class="promo">
+						<div class="deal">
+							<span>Tecnologia</span>
+						</div>
+						<span class="price">$30</span>
+						<ul class="features">  
+						</ul>
+						<button>Acquista</button>
+					</div>
 				</div>
 		</div>
 		

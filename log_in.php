@@ -9,6 +9,7 @@
       <title>Login</title>
       <link href="menu.css" rel="stylesheet" />
 		  <link href="login.css" rel="stylesheet" />
+		 <script type="text/javascript" src="login.js"></script>
       <!-- Funzioni JAVASCRIPT -->
       <script type="text/javascript">
          function erroreDati() {
@@ -34,13 +35,12 @@
       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       <!-- Form per login -->
          <center>
-            <form id="login" action="" method="POST">
 							<div class="wrapper">
-  							<form class="login">
+  							<form class="login" action="" method="POST">
     							<p class="title">Log in</p>
-									<input type="text" placeholder="Username" autofocus/>
+									<input type="text" placeholder="Username" name ="username"autofocus/>
 									<i class="fa fa-user"></i>
-									<input type="password" placeholder="Password" />
+									<input type="password" placeholder="Password" name="password"/>
 									<i class="fa fa-key"></i>
 									<a href="#">Forgot your password?</a>
 									<button>
@@ -48,9 +48,7 @@
 									<span class="state">Log in</span>
 									</button>
 								</form>
-  							<footer><a target="blank" href="http://boudra.me/">boudra.me</a></footer>
 							</div>
-            </form>
             <!-- PHP -->
             <?php 
                if(isset($_POST['username']))

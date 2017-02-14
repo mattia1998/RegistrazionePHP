@@ -33,7 +33,7 @@
       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       <!-- Form per login -->
          <center>
-            <form id="login" action="" method="POST">
+            <form id="login" action="" method="POST">			
                <table>
                   <tr>
                      <td><b>Username:</b></td>
@@ -46,6 +46,7 @@
                </table>
                <br/>
                <input type="submit" name="invia" value="Invia"><br/><br/>
+							
             </form>
             <!-- PHP -->
             <?php 

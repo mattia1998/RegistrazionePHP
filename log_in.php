@@ -9,7 +9,7 @@
       <title>Login</title>
       <link href="menu.css" rel="stylesheet" />
 		  <link href="login.css" rel="stylesheet" />
-		 <script type="text/javascript" src="login.js"></script>
+		  <script type="text/javascript" src="login.js"></script>
       <!-- Funzioni JAVASCRIPT -->
       <script type="text/javascript">
          function erroreDati() {
@@ -42,7 +42,6 @@
 									<i class="fa fa-user"></i>
 									<input type="password" placeholder="Password" name="password"/>
 									<i class="fa fa-key"></i>
-									<a href="#">Forgot your password?</a>
 									<button>
 									<i class="spinner"></i>
 									<span class="state">Log in</span>

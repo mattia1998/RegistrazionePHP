@@ -12,7 +12,6 @@
 	</head>
 	<body>	
 		<body bgcolor = "00BFFF"/>
-
 		<!-- Menu -->
 		<div align="center">
 			<nav align = "center">

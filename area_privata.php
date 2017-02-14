@@ -41,7 +41,7 @@
 			</form>
 		</div>
 		<div align="center">
-			<div class="promos">  
+			<div class="promos">
 				<div class="promo">
 					<div class="deal">
 						<span>Abbigliamento</span>

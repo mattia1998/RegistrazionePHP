@@ -8,6 +8,7 @@
    <head>
       <title>Login</title>
       <link href="menu.css" rel="stylesheet" />
+		  <link href="login.css" rel="stylesheet" />
       <!-- Funzioni JAVASCRIPT -->
       <script type="text/javascript">
          function erroreDati() {
@@ -33,20 +34,22 @@
       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       <!-- Form per login -->
          <center>
-            <form id="login" action="" method="POST">			
-               <table>
-                  <tr>
-                     <td><b>Username:</b></td>
-                     <td><input type="text" name="username"></td>
-                  </tr>
-                  <tr>
-                     <td><b>Password:</b></td>
-                     <td><input type="password" name="password"></td>
-                  </tr>
-               </table>
-               <br/>
-               <input type="submit" name="invia" value="Invia"><br/><br/>
-							
+            <form id="login" action="" method="POST">
+							<div class="wrapper">
+  							<form class="login">
+    							<p class="title">Log in</p>
+									<input type="text" placeholder="Username" autofocus/>
+									<i class="fa fa-user"></i>
+									<input type="password" placeholder="Password" />
+									<i class="fa fa-key"></i>
+									<a href="#">Forgot your password?</a>
+									<button>
+									<i class="spinner"></i>
+									<span class="state">Log in</span>
+									</button>
+								</form>
+  							<footer><a target="blank" href="http://boudra.me/">boudra.me</a></footer>
+							</div>
             </form>
             <!-- PHP -->
             <?php 

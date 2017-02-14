@@ -27,8 +27,8 @@
 		<br>
 		<br>
 		<div align="left">
-			<form align="left">
-				<select>
+			<form align="left" method="POST">
+				<select name="categoria[]">
 					<?php
 						$mysqli = new mysqli("localhost","root","","RegistrazioneUtenti");
 						$query = $mysqli->query("SELECT idCategoria,NomeCategoria FROM Categoria");
@@ -37,8 +37,14 @@
 						}
 					?>
 				</select>
+				<input type="submit" name="btnInvia" value="Invia" id="submit_button">
 			</form>
 		</div>
+		<?php
+			if(isset($_POST['btnInvia'])) {
+				$categoria = $_POST['categoria'];
+			}
+		?>
 		<div align="center">
 			<div class="promos">
 				<div class="promo">

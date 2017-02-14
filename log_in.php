@@ -32,22 +32,22 @@
             </li>
          </ul>
       </nav>
-      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/>
       <!-- Form per login -->
          <center>
-							<div class="wrapper">
-  							<form class="login" action="" method="POST">
-    							<p class="title">Log in</p>
-									<input type="text" placeholder="Username" name ="username"autofocus/>
-									<i class="fa fa-user"></i>
-									<input type="password" placeholder="Password" name="password"/>
-									<i class="fa fa-key"></i>
-									<button>
-									<i class="spinner"></i>
-									<span class="state">Log in</span>
-									</button>
-								</form>
-							</div>
+				<div class="wrapper">
+					<form class="login" action="" method="POST">
+						<p class="title">Log in</p>
+							<input type="text" placeholder="Username" name ="username"autofocus/>
+							<i class="fa fa-user"></i>
+							<input type="password" placeholder="Password" name="password"/>
+							<i class="fa fa-key"></i>
+							<button>
+							<i class="spinner"></i>
+							<span class="state">Log in</span>
+							</button>
+					</form>
+				</div>
             <!-- PHP -->
             <?php 
                if(isset($_POST['username']))

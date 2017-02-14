@@ -45,6 +45,7 @@
 				$categoria = $_POST['categoria'];
 			}
 		?>
+		<!--
 		<div align="center">
 			<div class="promos">
 				<div class="promo">
@@ -76,5 +77,6 @@
 					</div>
 				</div>
 		</div>
+		-->
 	</body>
 </html>

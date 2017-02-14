@@ -1,4 +1,4 @@
- $(document).ready(function() {
+  $(document).ready(function() {
     $('#contact_form').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
@@ -75,7 +75,17 @@
                     }
                 }
             },
-
+            zip: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your zip code'
+                    },
+                    zipCode: {
+                        country: 'US',
+                        message: 'Please supply a vaild zip code'
+                    }
+                }
+            },
             comment: {
                 validators: {
                       stringLength: {

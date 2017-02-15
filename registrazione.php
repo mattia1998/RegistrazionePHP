@@ -6,7 +6,11 @@
 <html>
 	<head>
 		<title>Registrazione</title>
+		<!-- CSS -->
 		<link href="menu.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+		<link href="registrazione.css" rel="stylesheet" />
       <!-- Funzioni JAVASCRIPT -->
 		<script type="text/javascript">	
 			function registrazioneAvvenuta(){
@@ -34,48 +38,30 @@
 			</ul>
 		</nav>
 		
-		<br/><br/><br/><br/><br/>
+		<br/>
 		<!-- Form per registrazione-->
-		<center>
-			<fieldset>
-				<legend>
-					Registrati
-				</legend>
-				<form id="reg" action="" method="POST">
-					<table>
-						<tr>
-							<td><b>Username:</b></td>
-							<td><input type="text" name="username" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Password:</b></td>
-							<td><input type="password" name="password" id="input_psw"></td>
-						</tr>
-						<tr>
-							<td><b>Nome:</b></td>
-							<td><input type="text" name="nome" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Cognome:</b></td>
-							<td><input type="text" name="cognome" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Data di Nascita:</b></td>
-							<td><input type="date" name="dataNascita" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Città:</b></td>
-							<td><input type="text" name="citta" id="input_user"></td>
-						</tr>
-						<tr>
-							<td><b>Stato:</b></td>
-							<td><input type="text" name="stato" id="input_user"></td>
-						</tr>			
-					</table>
-					<br/><br/>
-               <input type="submit" name="btnInvia" value="Invia" id="submit_button">
-				</form>
-			</fieldset>
+		<div class="testbox">
+		  <h1>Registration</h1>
+
+		  <form action="/">
+			 <hr>
+			<label id="icon" for="name"><i class="icon-envelope "></i></label>
+			<input type="text" name="email" id="name" placeholder="Email" required/>
+			<label id="icon" for="name"><i class="icon-user"></i></label>
+			<input type="text" name="username" id="name" placeholder="Username" required/>
+			<label id="icon" for="name"><i class="icon-user"></i></label>
+			<input type="text" name="nome" id="name" placeholder="Nome" required/>
+			<label id="icon" for="name"><i class="icon-user"></i></label>
+  			<input type="text" name="surname" id="name" placeholder="Cognome" required/>
+			<label id="icon" for="name"><i class="icon-user"></i></label>
+  			<input type="text" name="citta" id="name" placeholder="Citta'" required/>
+			<label id="icon" for="name"><i class="icon-user"></i></label>
+  			<input type="text" name="stato" id="name" placeholder="Stato" required/>
+   	 	<label id="icon" for="name"><i class="icon-shield"></i></label>
+    	 	<input type="password" name="password" id="name" placeholder="Password" required/>
+   		<a href="#" name="btnInvia"class="button">Registra</a>
+		</form>
+	</div>
 			<!-- PHP -->
 			<?php 
 				if(isset($_POST['username']))

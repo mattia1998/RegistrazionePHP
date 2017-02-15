@@ -59,7 +59,7 @@
   			<input type="text" name="stato" id="name" placeholder="Stato" required/>
    	 	<label id="icon" for="name"><i class="icon-shield"></i></label>
     	 	<input type="password" name="password" id="name" placeholder="Password" required/>
-   		<a href="#" name="btnInvia"class="button">Registra</a>
+   		<a href="#" name="btnInvia"class="button">Registrati</a>
 		</form>
 	</div>
 			<!-- PHP -->

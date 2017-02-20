@@ -40,70 +40,74 @@
 		
 		<br/>
 		<!-- Form per registrazione-->
-		<div class="testbox">
-		  <h1>Registration</h1>
+		<center>
+			<div class="testbox">
+			  <h1>Registration</h1>
 
-		  <form action="/">
-			 <hr>
-			<label id="icon" for="name"><i class="icon-envelope "></i></label>
-			<input type="text" name="email" id="name" placeholder="Email" required/>
-			<label id="icon" for="name"><i class="icon-user"></i></label>
-			<input type="text" name="username" id="name" placeholder="Username" required/>
-			<label id="icon" for="name"><i class="icon-user"></i></label>
-			<input type="text" name="nome" id="name" placeholder="Nome" required/>
-			<label id="icon" for="name"><i class="icon-user"></i></label>
-  			<input type="text" name="surname" id="name" placeholder="Cognome" required/>
-			<label id="icon" for="name"><i class="icon-user"></i></label>
-  			<input type="text" name="citta" id="name" placeholder="Citta'" required/>
-			<label id="icon" for="name"><i class="icon-user"></i></label>
-  			<input type="text" name="stato" id="name" placeholder="Stato" required/>
-   	 	<label id="icon" for="name"><i class="icon-shield"></i></label>
-    	 	<input type="password" name="password" id="name" placeholder="Password" required/>
-   		<a href="#" name="btnInvia"class="button">Registrati</a>
-		</form>
-	</div>
-			<!-- PHP -->
-			<?php 
-				if(isset($_POST['username']))
-				{
-					try
+			  <form action="/" method="POST">
+				<hr>
+				<label id="icon" for="name"><i class="icon-user"></i></label>
+				<input type="text" name="username" id="name" placeholder="Username" required/>
+				  <!-- -->
+				<label id="icon" for="name"><i class="icon-user"></i></label>
+				<input type="text" name="nome" id="name" placeholder="Nome" required/>
+				  <!-- -->
+				<label id="icon" for="name"><i class="icon-user"></i></label>
+				<input type="text" name="cognome" placeholder="Cognome" required/>
+				  <!-- -->
+				<label id="icon" for="name"><i class="icon-user"></i></label>
+				<input type="text" name="citta" id="name" placeholder="Citta'" required/>
+				  <!-- -->
+				<label id="icon" for="name"><i class="icon-user"></i></label>
+				<input type="text" name="stato" id="name" placeholder="Stato" required/>
+				  <!-- -->
+				<label id="icon" for="name"><i class="icon-shield"></i></label>
+				<input type="password" name="password" id="name" placeholder="Password" required/>
+				  <!-- -->
+			</form>
+		</div>
+				<!-- PHP -->
+				<?php 
+					if(isset($_POST['username']))
 					{
-						$dbh = new PDO('mysql:host=' . $host . ';dbname=' . $db, $username, $password);
-                  
-                  if($_POST['username']=="" OR $_POST['password']=="" OR $_POST['nome']=="" OR $_POST['cognome']="" OR $_POST['citta']=="" OR $_POST['stato']=="") {
-                     echo '<script type="text/javascript">erroreCampi();</script>';
-                  }
-                  else {
-                     $stm = $dbh->prepare("INSERT INTO Utenti(Username,Password,Nome,Cognome,DataNascita,Citta,Stato) VALUES(:user,:passwd,:nome,:cognome,:dataN,:citta,:stato)");
-                     $stm->bindValue(':user',$_POST['username']);
-                     $pw = md5($_POST['password']);
-                     $stm->bindValue(':passwd',$pw);
-                     $stm->bindValue(':nome',$_POST['nome']);
-                     $stm->bindValue(':cognome',$_POST['cognome']);
-                     $stm->bindValue(':dataN',$_POST['dataNascita']);
-                     $stm->bindValue(':citta',$_POST['citta']);
-                     $stm->bindValue(':stato',$_POST['stato']);
-                     $stm->execute();
-							print_r($stm);
-                     if($stm->errorCode() == 0)
-                     {
-                        echo '<script type="text/javascript">registrazioneAvvenuta()</script>';
-								header('Location:area_privata.php');
-                     }
-                     else
-							{
-                        echo 'Errore nella Query';
-                     }
-                  }
-					}
-					catch (PDOException $e) 
-					{
-						echo 'Errore con la connessione al Database';
-					}
-			}
-			?>
+						try
+						{
+							$dbh = new PDO('mysql:host=' . $host . ';dbname=' . $db, $username, $password);
 
-			<br/><br/>
+							if($_POST['username']=="" OR $_POST['password']=="" OR $_POST['nome']=="" OR $_POST['cognome']="" OR $_POST['citta']=="" OR $_POST['stato']=="") {
+								echo '<script type="text/javascript">erroreCampi();</script>';
+							}
+							else {
+								$stm = $dbh->prepare("INSERT INTO Utenti(Username,Password,Nome,Cognome,DataNascita,Citta,Stato) VALUES(:user,:passwd,:nome,:cognome,:dataN,:citta,:stato)");
+								$stm->bindValue(':user',$_POST['username']);
+								$pw = md5($_POST['password']);
+								$stm->bindValue(':passwd',$pw);
+								$stm->bindValue(':nome',$_POST['nome']);
+								$stm->bindValue(':cognome',$_POST['cognome']);
+								$stm->bindValue(':dataN',$_POST['dataNascita']);
+								$stm->bindValue(':citta',$_POST['citta']);
+								$stm->bindValue(':stato',$_POST['stato']);
+								$stm->execute();
+								print_r($stm);
+								if($stm->errorCode() == 0)
+								{
+									echo '<script type="text/javascript">registrazioneAvvenuta()</script>';
+									header('Location:area_privata.php');
+								}
+								else
+								{
+									echo 'Errore nella Query';
+								}
+							}
+						}
+						catch (PDOException $e) 
+						{
+							echo 'Errore con la connessione al Database';
+						}
+				}
+				?>
+
+				<br/><br/>
 		</center>
 	</body>
 </html>

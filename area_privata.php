@@ -37,7 +37,7 @@
 						}
 					?>
 				</select>
-				<input type="submit" name="btnInvia" value="Invia" id="submit_button">
+				<input type="submit" name="btnInvia" value="Cerca" id="submit_button">
 			</form>
 		</div>
 		<?php

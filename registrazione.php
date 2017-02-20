@@ -64,6 +64,7 @@
 				<label id="icon" for="name"><i class="icon-shield"></i></label>
 				<input type="password" name="password" id="name" placeholder="Password" required/>
 				  <!-- -->
+				  <input type="submit" name="cerca" value="Registrati" id="button_registrati">
 			</form>
 		</div>
 				<!-- PHP -->

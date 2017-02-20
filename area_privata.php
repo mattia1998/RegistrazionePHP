@@ -26,7 +26,7 @@
 		<br>
 		<br>
 		<br>
-		<div align="left">
+		<!<div align="left">
 			<form align="left" method="POST">
 				<select name="categoria[]">
 					<?php

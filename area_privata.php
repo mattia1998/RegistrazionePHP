@@ -28,25 +28,50 @@
 		<br>
 		<!<div align="left">
 			<form align="left" method="POST">
-				<select name="categoria[]">
+				<select name="categoria" onchange="submit()">
 					<?php
 						$mysqli = new mysqli("localhost","root","","RegistrazioneUtenti");
 						$query = $mysqli->query("SELECT idCategoria,NomeCategoria FROM Categoria");
-						while($row=$query->fetch_row()) {                                                 
-							echo "<option value='".$row[0]."'>".$row[1]."</option>";
+						while($row=$query->fetch_row()) {  
+							if($_POST['categoria'] == $row[0]) {
+								echo "<option value='".$row[0]."' selected='selected'>".$row[1]."</option>"
+							}
+							else 
+							{
+								echo "<option value='".$row[0]."'>".$row[1]."</option>";
+							}
 						}
 					?>
 				</select>
-				<input type="submit" name="btnInvia" value="Cerca" id="submit_button">
 			</form>
 		</div>
-		<?php
-			if(isset($_POST['btnInvia'])) {
-				$categoria = $_POST['categoria'];
-			}
-		?>
+		<div>
+      <?php
+		  $dbh = new PDO('mysql:host=' . $host . ';dbname=' . $db, $username, $password);
+		  $stm = $dbh->prepare("SELECT * FROM Prodotti WHERE idCategoria = ". $_POST['categoria']);
+		  $stm->execute();
+		  
+		  if($stm->rowCount() > 0)
+        {
+          while($result = $stm->fetch())
+          {
+				 echo '
+			<div class="promos">
+				<div class="promo scale">
+					<div class="deal">
+						<span>'. $result["NomeProdotto"] .'</span>
+					</div>
+					<span class="price">'. '&euro; ' . $result['PrezzoProdotto'] .'</span>
+					<ul class="features">
+					</ul>
+					<button>Acquista</button>
+				</div>
+			</div>';
+          }
+        }
+      ?>
+    </div>
 		<!--
-		<div align="center">
 			<div class="promos">
 				<div class="promo">
 					<div class="deal">
@@ -76,7 +101,6 @@
 						<button>Acquista</button>
 					</div>
 				</div>
-		</div>
 		-->
 	</body>
 </html>

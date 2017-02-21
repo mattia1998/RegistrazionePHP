@@ -60,7 +60,7 @@
                      $pw = md5($_POST['password']);
                      $stm->bindValue(':passwd',$pw);                                                                                                                                                       
                      $stm->execute();
-										$row = $stm->fetch();
+							$row = $stm->fetch();
 										//print_r($row[0]);
                     if($stm->rowCount() == 1) {
 											$_SESSION['id'] = $row[0];
